@@ -58,7 +58,7 @@ public class loginsteps extends BaseTest {
 
 	@Then("user can see logout link is appear on top right corner")
 	public void user_can_see_logout_link_is_appear_on_top_right_corner() {
-		driver.findElement(By.linkText("Logout")).click();
+		ldp.clickLogout();
 	}
 	
 	@When("user enters valid userid and password and click on login button")
