@@ -34,6 +34,9 @@ public class LoginPage {
 	@FindBy(xpath="//img[@src='include/images/vtiger-crm.gif']")
 	WebElement ImgLogo;
 	
+	@FindBy(xpath="//*[contains(text(),'You must specify a valid username and password.']")
+	WebElement ErrMsg;
+	
 	//By tbUserName = By.name("user_name");
 	
 	
@@ -46,6 +49,11 @@ public class LoginPage {
     public void verifyLogo()
     {
     	CommonActions.ElementExist(ImgLogo);
+    }
+    
+    public void verifyError()
+    {
+    	CommonActions.ElementExist(ErrMsg);
     }
     
     
